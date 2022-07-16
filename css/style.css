@@ -1,0 +1,110 @@
+:root {
+  --color_black: #333333;
+  --color_orange: #FF9900;
+  --color_orange-dark: #E1670E;
+  --color_white: #ffffff;
+  --color_gray: #666666;
+}
+
+/* --- hidden --- */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ******* GENERAL CLASSES ******* */
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 75px;
+}
+
+/* т.к header фиксированный */
+/* 100px - высота шапки */
+main {
+  padding-top: 100px;
+}
+
+
+section {
+  margin-bottom: 100px;
+}
+
+.button {
+  display: inline-flex;
+  padding: 20px 38px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  line-height: 125%;
+  color: var(--color_white);
+  background-color: var(--color_orange);
+  transition: color .3s, background-color .3s, border-color .3s;
+}
+
+.button:focus-visible {
+  background-color: rgba(255, 153, 0, 0.7);
+  outline: none;
+}
+
+.button:hover {
+  background-color: rgba(255, 153, 0, 0.7);
+}
+
+.button:active {
+  background-color: var(--color_orange-dark);
+}
+
+.button_border {
+  width: 175px;
+  height: 60px;
+  color: var(--color_white);
+  background-color: transparent;
+  border: 2px solid var(--color_orange);
+}
+
+.button_border:focus-visible {
+  background-color: var(--color_orange);
+  outline: none;
+}
+
+.button_border:hover {
+  background-color: var(--color_orange);
+}
+
+.button_border:active {
+  background-color: var(--color_orange-dark);
+  border-color: var(--color_orange-dark);
+}
+
+.section__title {
+  font-size: 48px;
+  line-height: 125%;
+}
+
+.sub-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.text {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 200%;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}

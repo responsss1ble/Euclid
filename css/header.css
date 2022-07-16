@@ -1,0 +1,195 @@
+  /* ============ Burger =========== */
+
+.header__burger {
+  display: none;
+}
+
+/* ========== Search-menu ========== */
+
+.search__body {
+  position: absolute;
+  top: 21px;
+  right: 0;
+  width: 539px;
+  padding: 16px 13px 16px 32px;
+  border-radius: 16px;
+  background-color: #fff;
+  overflow: hidden;
+  visibility: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+  transform: translateX(120%);
+  transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+  z-index: 4;
+}
+
+.search__btn {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.search__btn-close {
+  width: 24px;
+  height: 24px;
+}
+
+.search__body--active {
+  transform: none;
+  visibility: visible;
+}
+
+/*! как убрать? */
+
+.search__body .search__body--active + .header__nav-block > .search__btn {
+  display: none;
+}
+
+/* ! */
+
+.search__form {
+  display: flex;
+  align-items: center;
+}
+
+.search__input {
+  width: 100%;
+  margin-right: 14px;
+  padding: 3px 0;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.search__form ::placeholder {
+  color: #ADADAD;
+}
+
+.search__form .search__btn {
+  margin-right: 22px;
+}
+
+.search__btn {
+  z-index: 3;
+}
+
+.search__btn svg rect {
+  transition: fill .3s;
+}
+
+.search__btn svg path {
+  transition: stroke .3s;
+}
+
+.search__btn-close svg rect {
+  transition: fill .3s;
+}
+
+.search__btn-close svg circle {
+  transition: stroke .3s;
+}
+
+.search__btn:hover svg path {
+  stroke: var(--color_orange);
+}
+
+.search__btn:hover svg rect {
+  fill: var(--color_orange);
+}
+
+.search__btn-close:hover svg rect {
+  fill: var(--color_orange);
+}
+
+.search__btn-close:hover svg circle {
+  stroke: var(--color_orange);
+}
+
+.search__btn-close:active svg rect {
+  fill: var(--color_black);
+}
+
+.search__btn-close:active svg circle {
+  stroke: var(--color_black);
+}
+
+
+/* ====================== HEADER ====================== */
+
+.header__logo {
+  max-width: 224px;
+  z-index: 4;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: var(--color_white);
+  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+}
+
+.header__body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  min-height: 100px;
+}
+
+.header__nav-block {
+  display: flex;
+}
+
+.menu__list {
+  display: flex;
+  margin-right: 85px;
+  align-items: center;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 85px;
+}
+
+.menu__link {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color .3s;
+}
+
+.header a:focus-visible,
+.header button:focus-visible {
+  outline: 2px solid var(--color_orange);
+  outline-offset: 5px;
+}
+
+.menu__link::after {
+  content: "";
+  position: absolute;
+  top: 130%;
+  right: 0;
+  bottom: 0px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--color_orange);
+  transition: width .2s;
+}
+
+.menu__link:active::after {
+  background-color: var(--color_orange-dark);
+}
+
+.menu__link:hover::after {
+  width: 100%;
+}
+
+.header a:active {
+  outline: none;
+}
+
+.menu__link:active {
+  color: var(--color_orange-dark);
+}

@@ -1,0 +1,76 @@
+.about__title {
+  margin-bottom: 20px;
+}
+
+.about__descr {
+  margin-bottom: 49px;
+  max-width: 1235px;
+}
+
+.about__blocks-wrap {
+  display: flex;
+}
+
+.about__left-block {
+  max-width: 49.04%;
+  margin-right: 32px;
+}
+
+.about__article {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  background-image: url('../img/about/about-project.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-article__detail-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 196px;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.detail-block__text {
+  flex: 0 1 454px;
+  font-weight: 700;
+  color: var(--color_white);
+}
+
+.about__right-block {
+  max-width: 49.153%;
+}
+
+.about__cards-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__card {
+  display: flex;
+  padding: 65px 60px;
+  outline: 1px solid #CACACA;
+  background-color: var(--color_white);
+}
+
+.about__card:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.about-card__img {
+  margin-right: 50px;
+}
+
+.about-card__text-block {
+  flex: 0 1 452px;
+}
+
+.text-block__sub-title {
+  margin-bottom: 8px;
+  line-height: 123%;
+}

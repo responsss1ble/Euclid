@@ -1,0 +1,130 @@
+.faq__title {
+  margin-bottom: 43px;
+}
+
+.accordion {
+  margin: 0;
+  border: none;
+}
+
+.accordion__control {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  margin-top: -1px;
+  padding: 30px 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  border-top: 1px solid #CACACA;
+  border-bottom: 1px solid #CACACA;
+  transition: border-color .5s, color .5s;
+}
+
+/* Marker */
+
+.accordion__marker {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ECECEC;
+  transition: background-color .3s ease-in-out, transform .3s ease-in-out;
+}
+
+.accordion__marker::before,
+.accordion__marker::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: #666666;
+  transform: translate(-50%, -50%);
+  transition: background-color .3s ease-in-out;
+}
+
+.accordion__marker::before {
+  width: 50%;
+  height: 1px;
+}
+
+.accordion__marker::after {
+  width: 1px;
+  height: 50%;
+}
+/* ============================================================================================== */
+
+.accordion__marker {
+  flex-shrink: 0;
+}
+
+.accordion--active .accordion__marker {
+  transform: rotate(45deg);
+}
+
+.accordion--active .accordion__control {
+  /* border-bottom: 1px solid transparent; */
+  border-bottom: none;
+}
+
+.accordion__content {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -1px;
+  max-width: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  transition-property: height, visibility;
+  transition-timing-function: ease;
+}
+
+.accordion__content .text {
+  max-width: 1003px;
+}
+
+.accordion--active .accordion__content {
+  visibility: visible;
+  border-bottom: 1px solid transparent;
+}
+
+.accordion--active .accordion__control:hover + .accordion__content {
+  border-color: var(--color_orange);
+}
+
+.accordion__content .text {
+  margin-bottom: 40px;
+}
+
+.accordion__control:focus-visible {
+  z-index: 2;
+  outline: none;
+  color: var(--color_orange);
+  border-color: var(--color_orange);
+}
+
+.accordion__control:hover {
+  z-index: 2;
+  color: var(--color_orange);
+  border-color: var(--color_orange);
+}
+
+.accordion__control:focus-visible .accordion__marker,
+.accordion__control:hover .accordion__marker {
+  background-color: var(--color_orange);
+}
+
+.accordion__control:focus-visible .accordion__marker::before,
+.accordion__control:focus-visible .accordion__marker::after,
+.accordion__control:hover .accordion__marker::before,
+.accordion__control:hover .accordion__marker::after {
+  background-color: var(--color_white);
+}
+
+.gray-slash {
+  color:#CACACA;
+}

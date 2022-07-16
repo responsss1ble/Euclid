@@ -1,0 +1,152 @@
+/* ================= HEADER media ================*/
+
+@media (max-width: 1023px) {
+  .header__body {
+    min-height: 69px;
+    padding: 10px 0 11px;
+  }
+
+  .header__menu {
+    padding: 144px 50px 40px;
+  }
+
+  .search__body,
+  .search__body--active {
+    top: 5px;
+  }
+
+  .header__menu::before {
+    height: 69px;
+  }
+}
+
+/* ======================= HERO media ========================== */
+
+@media (max-width: 1023px) {
+
+  .hero__content {
+    padding: 160px 40px;
+    max-width: 100%;
+  }
+
+  .hero__title {
+    font-size: 50px;
+    margin-bottom: 17px;
+    line-height: 122%;
+  }
+
+  .hero__text {
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+}
+
+/* ====================== ABOUT media ===================== */
+
+@media (max-width: 1023px) {
+  .about__descr {
+    margin-bottom: 60px;
+  }
+
+  .about-article {
+    min-height: 650px;
+  }
+
+  .about-article__detail-block {
+    padding: 34px 40px;
+  }
+
+  .detail-block__text {
+    flex: 0 1 366px;
+  }
+
+  .about__card {
+    padding: 35px 40px;
+    align-items: center;
+  }
+
+  .about-card__img {
+    margin-right: 16px;
+    max-width: 114px;
+    max-height: 99px;
+  }
+}
+
+/* ======================= HOW-WE-ARE-WORKING media ======================== */
+
+@media (max-width: 1023px) {
+  .tabs-item__right-block,
+  .tabs-item__left-block {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .tabs__nav {
+    justify-content: space-between;
+    margin-bottom: 49px;
+  }
+
+  .tabs-item__right-block {
+    margin-bottom: 39px;
+    min-height: 284px;
+    padding: 0;
+  }
+
+  .tabs-nav__item:not(:last-child) {
+    margin: 0;
+  }
+
+  .tabs-item {
+    flex-direction: column-reverse;
+    flex: 0 1 100%;
+  }
+
+  .tabs-item__sub-title {
+    margin-bottom: 8px;
+  }
+
+  .tabs-item__right-block img {
+    height: 284px;
+  }
+}
+
+/* ================== FAQ media ================== */
+
+@media (max-width: 1023px) {
+  .accordion__control-title {
+    max-width: 70%;
+  }
+}
+
+/* ================== FOOTER media ================== */
+
+@media (max-width: 1023px) {
+  .footer__left-block {
+    margin: 0;
+  }
+}
+
+@media (max-width: 968px) {
+  .footer__nav {
+    display: none;
+  }
+
+  .footer__body {
+    flex-direction: column-reverse;
+  }
+
+  .footer__middle-block {
+    flex: 0 1 auto;
+    margin-bottom: 48px;
+    /* flex-basis уже hight т.к поменялись оси (column)*/
+    max-width: 540px;
+  }
+
+  .footer__left-block {
+    flex: 0 1 auto;
+  }
+
+  .footer__logo {
+    margin-bottom: 16px;
+  }
+}
